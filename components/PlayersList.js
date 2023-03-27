@@ -97,7 +97,7 @@ export default function PlayersList() {
       </Box >
       <Button onClick={handleClassify} variant='contained' sx={{ mt: 3 }} disabled={players.length > 0 ? false : true}>next step  {'>'}</Button>
 
-      <Modal open={open} handleClose={handleClose} context={`your players numbers aren't enough for teams. you created ${teamsNumber} teams and your players are ${players.length}.`} acceptText="np, go on." rejectionText="okay, i will add" rejectFunc={handleClose} acceptFunc={() => setStep(2)} />
+      <Modal open={open} handleClose={handleClose} context={`you have created ${teamsNumber} teams, but you have ${players.length} player${players.length > 1 ? 's' : ''}, which is not enough for the teams.`} acceptText="np, go on." rejectionText="okay, i will add" rejectFunc={handleClose} acceptFunc={() => setStep(2)} />
     </Card >
   )
 }
